@@ -16,7 +16,7 @@ PDF
 
 Saída:
 
-- estrutura.json
+- elementos.json
 - relatorio.txt
 
 ### Fase 2
@@ -53,9 +53,10 @@ src/
 1. Coloque um único PDF dentro da pasta `pdf`.
 2. Execute o projeto.
 3. O sistema localizará o PDF.
-4. O texto será extraído.
-5. O fluxo será interpretado.
-6. Será gerado um JSON estruturado.
+4. O texto e as coordenadas dos elementos serão extraídos para `output/elementos.json`.
+5. O fluxo será interpretado a partir dos elementos extraídos.
+
+Cada página contém uma lista `elementos`. Cada elemento tem `texto` e a caixa delimitadora (`x0`, `y0`, `x1`, `y1`) na página do PDF. As coordenadas mantêm o posicionamento necessário para interpretar tarefas, decisões e fluxos; a relação entre tarefas depende também da análise dos conectores do fluxograma.
 
 ---
 
